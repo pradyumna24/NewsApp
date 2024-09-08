@@ -17,7 +17,6 @@ This Android application uses the following frameworks and libraries:
   - **[ViewModel]
   - **[LiveData] 
   - **[Room]
-  - **[Navigation Component]
 
 - **Networking:**
   - **[Retrofit]
