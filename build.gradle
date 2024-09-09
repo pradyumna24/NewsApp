@@ -68,21 +68,23 @@ dependencies {
     // Coroutines for background tasks
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5'  // This provides viewModelScope
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5'
+    implementation libs.androidx.idling.concurrent
+    implementation libs.androidx.espresso.intents// This provides viewModelScope
 
     // Test dependencies
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     testImplementation 'org.mockito:mockito-core:3.11.2'
-    testImplementation 'androidx.arch.core:core-testing:2.1.0'
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
     testImplementation 'org.mockito:mockito-inline:3.11.2'
-    testImplementation 'androidx.test:core:1.4.0'
-    androidTestImplementation 'androidx.test:runner:1.4.0'
-    androidTestImplementation 'androidx.test:rules:1.4.0'
+    testImplementation 'androidx.test:core:1.6.1'
+    androidTestImplementation 'androidx.test:runner:1.6.1'
+    androidTestImplementation 'androidx.test:rules:1.6.1'
     testImplementation 'org.robolectric:robolectric:4.6.1'
-
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.6.1'
 
     // Room dependencies
     implementation 'androidx.room:room-runtime:2.6.1'
@@ -92,6 +94,7 @@ dependencies {
     // Hilt dependencies
     implementation 'com.google.dagger:hilt-android:2.48'
     kapt 'com.google.dagger:hilt-android-compiler:2.48'
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.28-alpha' // Hilt testing
 
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
